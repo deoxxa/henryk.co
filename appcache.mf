@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+CACHE:
+  index.html
+  style.css
+  img/pixel.png
+  js/app.js
+
+NETWORK:
+  *
