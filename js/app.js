@@ -23,11 +23,17 @@ var ajaxp = function ajaxp(url, cb) {
 
   var url = "https://api.instagram.com/v1/users/" + userId + "/media/recent/?access_token=" + accessToken;
 
+  var photo = document.getElementById("photo");
+
   ajaxp(url, function(r) {
     if (!r) {
       return;
     }
 
-    document.getElementById("photo").src = r.data[0].images.standard_resolution.url;
+    var img = r.data[0].images.standard_resolution;
+
+    photo.src = img.url;
+    photo.height = img.height;
+    photo.width = img.width;
   });
 })();
